@@ -1,0 +1,2 @@
+INSERT INTO usuarios ( id, usu_login, usu_senha, usu_email, usu_nome, usu_ativo ) VALUES ( 1, 'joaovf', '$2a$10$sFKmbxbG4ryhwPNx/l3pgOJSt.fW1z6YcUnuE2X8APA/Z3NI/oSpq', 'joaofreitas@gmail.com', 'João Vitor Freitas',  true);
+INSERT INTO usuarios ( id, usu_login, usu_senha, usu_email, usu_nome, usu_ativo ) VALUES ( 2, 'cicerojmm', '$2a$10$sFKmbxbG4ryhwPNx/l3pgOJSt.fW1z6YcUnuE2X8APA/Z3NI/oSpq', 'cicerojmm@gmail.com', 'Cicero Moura',  true );

@@ -1,0 +1,16 @@
+version: '2'
+services:
+   web:
+      container_name: server-api-flask
+      hostname: server-api-flask
+      build: .
+      ports:
+         - "5000:5000"
+      volumes:
+         - .:/code
+      networks:
+         - acoesb3-net
+
+networks:
+  acoesb3-net:
+    driver: bridge

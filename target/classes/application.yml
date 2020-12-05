@@ -1,0 +1,28 @@
+# Database
+spring:
+   application:
+      name: trademap_clone
+   datasource:
+      driver-class-name: org.postgresql.Driver
+      url: jdbc:postgresql://localhost:5432/trademap_clone
+      username: postgres
+      password: Postgres2020!
+      initialization-mode: always
+   api:
+      versao: 1.0.0
+# JPA
+   jpa:
+      hibernate:
+         ddl-auto: update
+      show-sql: true
+      database: postgresql
+      database-platform: org.hibernate.dialect.PostgreSQLDialect
+      format_sql: true
+# Kafka
+kafka:
+   brokers: localhost:9092
+   topico-acao-b3: acao.b3.dados
+# API Externa
+api:
+   b3:
+      url-base: http://localhost:5000
