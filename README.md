@@ -20,17 +20,18 @@ Aplicações envolvidas:
 ### Como executar a aplicação
 
 - Broker do Kafka (dentro da pasta arquivos-docker):
-
+```sh
 $ docker-compose -f docker-compose-kafka.yml up -d
-
+```
 - Postgres (dentro da pasta arquivos-docker):
-
+```sh
 $ docker-compose -f docker-compose-postgres.yml up -d
-
+```
 - API Flask com YahooFinances (dentro da pasta api-flask-consulta-yahoo-b3:
-
+```sh
 $ docker-compose up -d
-
+```
 Dentro da pasta api-flask-consulta-yahoo-b3 ainda possui um script em Python para consumir dados do Kafka para você testar a sua aplicação.
-
+```sh
 $ python3 consumer-teste-kafka.py
+```
