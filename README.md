@@ -9,6 +9,7 @@ Tecnologias utilizadas na API:
 - PostgreSQL
 
 Aplicações envolvidas:
+- API Rest: escrita em Java e Spring Boot com endpoints para simular funcionalidades do TradeMap
 - API para coletar ações da B3: escrita em Python com Flask utilizando a lib do Yahoo Finances (https://finance.yahoo.com/)
 - Docker:
   - Arquivo do docker compose para subir o broker Kafka
@@ -19,13 +20,17 @@ Aplicações envolvidas:
 ### Como executar a aplicação
 
 - Broker do Kafka (dentro da pasta arquivos-docker):
+
 $ docker-compose -f docker-compose-kafka.yml up -d
 
 - Postgres (dentro da pasta arquivos-docker):
+
 $ docker-compose -f docker-compose-postgres.yml up -d
 
 - API Flask com YahooFinances (dentro da pasta api-flask-consulta-yahoo-b3:
+
 $ docker-compose up -d
 
 Dentro da pasta api-flask-consulta-yahoo-b3 ainda possui um script em Python para consumir dados do Kafka para você testar a sua aplicação.
+
 $ python3 consumer-teste-kafka.py
