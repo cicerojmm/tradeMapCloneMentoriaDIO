@@ -1,0 +1,14 @@
+{
+    "name": "mqtt-sink",
+    "config": {
+        "connector.class": "io.confluent.connect.mqtt.MqttSinkConnector",
+			  "confluent.topic.bootstrap.servers": "kafka:19092",
+        "tasks.max": "1",
+        "mqtt.server.uri": "tcp://test.mosquitto.org:1883",
+        "topics":"acao.b3.dados",
+        "mqtt.qos": "2",
+        "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+        "value.converter": "org.apache.kafka.connect.storage.StringConverter",
+        "confluent.topic.replication.factor": "1"
+    }
+}
