@@ -16,7 +16,9 @@ Aplicações envolvidas:
   - Arquivo do docker compose para subir o Postgres
   - Arquivo do docker compose para subir a API em Flask
   
-  
+### Arquitetura do Projeto
+![alt text](https://github.com/cicerojmm/tradeMapCloneMentoriaDIO/blob/main/images/arquitetura-projeto.png)
+
 ### Como executar a aplicação
 
 - Broker do Kafka (dentro da pasta arquivos-docker):
@@ -35,3 +37,24 @@ Dentro da pasta api-flask-consulta-yahoo-b3 ainda possui um script em Python par
 ```sh
 $ python3 consumer-teste-kafka.py
 ```
+
+### Kafka Connect com MQTT
+
+Para que o aplicativo móvel receba as informaçẽos da API em tempo real, utilizamos o MQTT, assim priorizamos a velocidade e a economia de recursos na troca de informações.
+
+Para este processo utilizamos o Kafka Connect para automatizar a transição das informações do Kafka para o Broker MQTT que pode ser qualquer um que suporte o protocolo.
+
+A instalação pode ser feita conforme o comando abaixo:
+```sh
+$ confluent-hub install confluentinc/kafka-connect-mqtt:latest
+```
+
+A instalação deve ser realizada no path: /etc/kafka-connect/jars
+
+Após a instalação o container ou o Kafka Connect deve ser reiniciado.
+
+A imagem abaixo exemplifica a instalação do Connect do MQTT.
+
+![alt text](https://github.com/cicerojmm/tradeMapCloneMentoriaDIO/blob/main/images/install-kafka-connect-mqtt.png)
+
+
