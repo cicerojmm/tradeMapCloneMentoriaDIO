@@ -2,7 +2,7 @@
     "name": "mqtt-sink",
     "config": {
         "connector.class": "io.confluent.connect.mqtt.MqttSinkConnector",
-			  "confluent.topic.bootstrap.servers": "kafka:19092",
+        "confluent.topic.bootstrap.servers": "kafka:19092",
         "tasks.max": "1",
         "mqtt.server.uri": "tcp://test.mosquitto.org:1883",
         "topics":"acao.b3.dados",
