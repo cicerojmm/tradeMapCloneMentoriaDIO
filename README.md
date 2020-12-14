@@ -16,6 +16,8 @@ Aplicações envolvidas:
   - Arquivo do docker compose para subir o Postgres
   - Arquivo do docker compose para subir a API em Flask
   
+Aplicativo Android do Projeto: https://github.com/joaooab/tradeMapCloneMentoriaDIO-Android
+  
 ### Arquitetura do Projeto
 ![alt text](https://github.com/cicerojmm/tradeMapCloneMentoriaDIO/blob/main/images/arquitetura-projeto.png)
 
