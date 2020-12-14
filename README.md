@@ -44,7 +44,12 @@ Para que o aplicativo móvel receba as informaçẽos da API em tempo real, util
 
 Para este processo utilizamos o Kafka Connect para automatizar a transição das informações do Kafka para o Broker MQTT que pode ser qualquer um que suporte o protocolo.
 
-A instalação pode ser feita conforme o comando abaixo:
+A instalação pode ser feita conforme os passos logo abaixo:
+1. Acessar o container do Kafka Connect com o Docker:
+```sh
+$ docker exec -it kafka-connect bash
+```
+2. Instalar o Kafka connect do MQTT dentro do container:
 ```sh
 $ confluent-hub install confluentinc/kafka-connect-mqtt:latest
 ```
@@ -56,5 +61,13 @@ Após a instalação o container ou o Kafka Connect deve ser reiniciado.
 A imagem abaixo exemplifica a instalação do Connect do MQTT.
 
 ![alt text](https://github.com/cicerojmm/tradeMapCloneMentoriaDIO/blob/main/images/install-kafka-connect-mqtt.png)
+
+3. Depois sair do Container com o comando exit e reiniciar o container:
+```sh
+$ docker restart kafka-connect
+```
+
+4. Com o auxilio do Postman (ou outra parecida), fazer uma requisição POST no endpoint http://localhost:8083/connectors com o JSON do repositório no caminho: arquivos-docker/config-kafka-connect-mqtt.json
+5. Obs: o tópico do MQTT será igual o do Kafka configurado no JSON do connect.
 
 
