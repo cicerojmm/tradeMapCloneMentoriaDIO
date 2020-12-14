@@ -70,6 +70,10 @@ $ docker restart kafka-connect
 ```
 
 4. Com o auxilio do Postman (ou outra parecida), fazer uma requisição POST no endpoint http://localhost:8083/connectors com o JSON do repositório no caminho: arquivos-docker/config-kafka-connect-mqtt.json
+```sh
+$ curl -X POST -H "Content-Type: application/json" -d @arquivos-docker/config-kafka-connect-mqtt.json http://localhost:8083/connectors
+```
+
 5. Obs: o tópico do MQTT será igual o do Kafka configurado no JSON do connect.
 
 
